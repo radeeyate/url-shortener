@@ -1,0 +1,12 @@
+<form action="/add" method="post">
+    <label for="url">URL</label><br>
+    <input type="text" id="url" name="url" required><br>
+    <label for="custom">Custom URL</label><br>
+    <input type="text" id="custom" name="custom"><br>
+    {% if not uhoh == None %}
+        {% if uhoh == "taken" %}
+            <p style="color: red;">custom url taken</p>
+        {% endif %}
+    {% endif %}
+    <input type="submit" value="Shorten!">
+</form>
